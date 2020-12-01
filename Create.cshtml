@@ -1,0 +1,73 @@
+﻿@model OrderApplicationPage.Models.Order
+
+
+<div class="text-center">
+    <h1 class="display-4">Online Order Information</h1>
+    <p>Click for more <a href="https://www.newegg.ca/promotions/nepro/18-1552/index.html">Newegg Seller</a>.</p>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <form method="post" asp-action="Create">
+                <fieldset>
+                    <legend>Order Information</legend>
+                    <div class="row">
+                        <div class="col-md-6">
+                        
+                            <div class="form-group">
+                                <label asp-for="OrderNumber">
+
+                                </label>
+                                <input asp-for="OrderNumber" class="form-control" type="text" id="OrderNumber" />
+                                <span asp-validation-for="OrderNumber" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="ShipToFirstName">
+
+                                </label>
+                                <input asp-for="ShipToFirstName" class="form-control" type="text" id="ShipToFirstName" />
+                                <span asp-validation-for="ShipToFirstName" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label asp-for="ShipToAddress1">
+
+                                </label>
+                                <input asp-for="ShipToAddress1" class="form-control" type="text" id="ShipToAddress1" />
+                                <span asp-validation-for="ShipToAddress1" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="ShipToZipCode">
+
+                                </label>
+                                <input asp-for="ShipToZipCode" class="form-control" type="text" id="ShipToZipCode" />
+                                <span asp-validation-for="ShipToZipCode" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label asp-for="ShipToCountryCode">
+
+                            </label>
+                            <input asp-for="ShipToCountryCode" class="form-control" type="text" id="ShipToCountryCode" />
+                            <span asp-validation-for="ShipToCountryCode" class="text-danger"></span>
+                        </div>
+                    </div>
+                </fieldset>
+                <input class="btn-success btn-lg float-right" type="submit" id="submit" value="Submit Order" />
+            </form>
+
+        </div>
+    </div>
+</div> 

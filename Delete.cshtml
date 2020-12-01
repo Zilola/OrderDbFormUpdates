@@ -1,0 +1,65 @@
+﻿@model OrderApplicationPage.Models.Order
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+
+            <form method="post" asp-action="DeletePost">
+
+                <input asp-for="Number" hidden />
+                <fieldset>
+                    <div class="row">
+                        <div class="col-md-6">
+
+                            <div class="form-group">
+                                <label asp-for="OrderNumber">
+
+                                </label>
+                                <input asp-for="OrderNumber" disabled class="form-control" type="text" id="OrderNumber" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="ShipToFirstName">
+
+                                </label>
+                                <input asp-for="ShipToFirstName" disabled class="form-control" type="text" id="ShipToFirstName" />
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label asp-for="ShipToAddress1">
+
+                                </label>
+                                <input asp-for="ShipToAddress1" disabled class="form-control" type="text" id="ShipToAddress1" />
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="ShipToZipCode">
+
+                                </label>
+                                <input asp-for="ShipToZipCode" disabled class="form-control" type="text" id="ShipToZipCode" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label asp-for="ShipToCountryCode">
+
+                            </label>
+                            <input asp-for="ShipToCountryCode" disabled class="form-control" type="text" id="ShipToCountryCode" />
+                        </div>
+                    </div>
+                </fieldset>
+                <input class="btn-danger btn-lg float-right" type="submit" id="submit" value="Delete Order" />
+            </form>
+
+        </div>
+    </div>
+</div> 
